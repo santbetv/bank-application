@@ -1,0 +1,77 @@
+# java-client-microservice-backend
+
+![Java Version](https://img.shields.io/badge/Java-11-blue)
+![Spring Boot Version](https://img.shields.io/badge/Spring%20Boot-2.4.2-green)
+
+### Diagrama-de-componentes
+
+![Architecture1](img/diagrama-componentes.png)
+
+### Architecture based on microservices
+
+```bash
+.
+├── main
+│   ├── java
+│   │   └── com
+│   │       └── devsu
+│   │           └── hackerearth
+│   │               └── backend
+│   │                   └── client
+│   │                       ├── ClientApplication.java
+│   │                       ├── controller
+│   │                       │   └── ClientController.java
+│   │                       ├── exception
+│   │                       │   ├── ApiExceptionHandler.java
+│   │                       │   ├── ApiExceptionResponse.java
+│   │                       │   └── BussinesRuleException.java
+│   │                       ├── mapper
+│   │                       │   └── ClientResponseMapper.java
+│   │                       ├── model
+│   │                       │   ├── Base.java
+│   │                       │   ├── Client.java
+│   │                       │   ├── dto
+│   │                       │   │   ├── ClientDto.java
+│   │                       │   │   └── PartialClientDto.java
+│   │                       │   └── Person.java
+│   │                       ├── repository
+│   │                       │   └── ClientRepository.java
+│   │                       └── service
+│   │                           ├── ClientServiceImpl.java
+│   │                           └── ClientService.java
+│   └── resources
+│       ├── application.properties
+│       ├── import.sql
+│       ├── static
+│       └── templates
+└── test
+    └── java
+        └── com
+            └── devsu
+                └── hackerearth
+                    └── backend
+                        └── client
+                            ├── ClientApplicationTests.java
+                            ├── sampleTest.java
+                            └── service
+                                └── ClientServiceImplTest.java
+
+```
+
+The architecture of the generated project consists of :
+
+1. `configuration` contains all the external library implementations to be configured inside spring-boot.
+2. `controller` contains the communication interfaces with the client.
+3. `entity` contains the persistence domains.
+4. `exception` contains the custom-exception classes handled by in the code.
+5. `extension` contains the classes that modify system functionality.
+6. `helper` contains functionality necessary for general operation.
+7. `dto` contains classes that separate in-memory objects from the database.
+8. `repository` contains the classes or components that encapsulate the logic necessary to access the data sources.
+9. `service` contains the interfaces and implementations that define the functionality provided by the service.
+
+## Requirements
+
+To run the application artifact you need:
+
+- [JDK 11](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)

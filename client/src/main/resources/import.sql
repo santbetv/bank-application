@@ -1,0 +1,1 @@
+insert into clients (dni, name, password, gender, phone, age, address, is_active) values ('1101160032', 'John Doe', '1234', 'M','593-2-3731-110',50,'123 Main St, Springfield', true);
